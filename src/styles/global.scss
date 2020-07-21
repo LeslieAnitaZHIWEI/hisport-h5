@@ -1,0 +1,1068 @@
+.pageContent{
+    padding:5px 10px
+}
+body{
+    font-family: "Microsoft YaHei"!important;
+}
+.dashboard {
+    &-container {
+      margin: 30px;
+    }
+    &-text {
+      font-size: 30px;
+      line-height: 46px;
+    }
+  }
+  .wrapper{
+      padding:10px
+  }
+@mixin text-overflow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+@mixin card-shadow{
+  box-shadow: 0 0.1em 0.5em 0 rgba(0,0,0,.1);
+}
+.card {
+  display: block;
+  border: 1px solid #f6f6f6;
+  padding: 5px 10px;
+  @include card-shadow;
+  border-radius: 10px;
+  position: relative;
+}
+.min{
+    color: #1bc2b1;
+    line-height: 28px;
+  }
+  .van-button--mini{
+    border-radius: 15px;
+    background-color: #1bc2b1;
+    color:#fff;
+    border:none;
+  }
+  .clearFix{
+    clear:both;
+  }
+  .dian{
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      background-color: #1bc2b1;
+    }
+
+.van-field__control{
+  input {
+    &:-internal-autofill-selected{
+      background: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.card-normal,
+.card-simple{
+
+  border: 1px solid rgba(152, 152, 152, 0.2);
+  border-radius: 10px;
+
+  box-shadow: 0 1px 6px rgba(0,0,0,.12);
+
+  line-height: 1.4;
+}
+
+/** 发灰色光带圆角的卡片，经常使用 */
+.card-normal{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 22px 20px;
+
+  .main-content{
+    flex: 1;
+  }
+  .header{
+
+    margin-bottom: 10px;
+    .title,
+    p{
+      display: inline;
+      margin:0;
+      padding:0;
+    }
+  }
+
+  .title{
+    font-size: 19px;
+    font-weight: normal;
+  }
+
+  .content{
+    strong{
+      margin: 0 3px;
+      font-size: 19px;
+      font-weight: normal;
+    }
+  }
+
+  .extra{
+    width: 80px;
+    text-align: right;
+    color: #1bc2b1;
+    text-align: right;
+
+
+    .van-icon{
+      font-size: 12px;
+      margin-top: -3px;
+      vertical-align: middle;
+    }
+    .van-icon + .van-icon{
+      margin-left: -8px;
+    }
+
+  }
+}
+
+/** 只有标题和说明，发灰色光的圆角 */
+.card-simple{
+  padding:0 10px 28px 10px;
+  text-align: center;
+
+  .title{
+    margin-bottom: 10px;
+  }
+  .content{
+    margin:0;
+    padding:0;
+  }
+}
+
+.panel-normal{
+  > .header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    padding: 5px 0 10px 0;
+    .title{
+      flex:1;
+      margin:0;
+      padding: 5px 0;
+      font-size: 16px;
+      color:#333333;
+    }
+
+    /** 带点装饰的 title */
+    .title-em{
+      &::before{
+        content: '';
+        display: inline-block;
+
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        background: #1BC2B1;
+
+        vertical-align: middle;
+      }
+    }
+
+    .extra{
+      flex:1;
+
+      font-size: 12px;
+      color:#999999;
+      text-align: right;
+
+      .van-btn{
+
+      }
+    }
+  }
+}
+
+.primary-btn-wrap{
+  text-align: center;
+}
+.primary-btn{
+  display: block;
+  width:100%;
+  background: #443c48;
+  border-radius: 25px;
+  border: none;
+  height: 46px;
+  color:#fff;
+  font-size: 16px;
+}
+
+.primary-input{
+
+  border: 1px solid #f1f1f1;
+  // background: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  color: #454545;
+  box-shadow: 0 1px 6px rgba(0,0,0,.12);
+}
+
+.bottom-btn{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left:0;
+  z-index: 100;
+
+  height: 50px;
+
+  border:none;
+  border-radius: 0;
+
+  background: #443c48;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 45px;
+  .van-button__text{
+    letter-spacing:1px;
+  }
+}
+
+.btn-small-primary{
+  height: auto;
+  padding: 4px 16px;
+  font-size: 14px;
+}
+
+.bottom-btn-primary,
+.btn-small-primary,
+.btn-primary{
+  background: #1bc2b1;
+  color:#fff;
+}
+
+/** 进度条 */
+.page-progress{
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+  background: #d3d3d3;
+  > span{
+    display: block;
+    height: 2px;
+    background: #1bc2b1;
+    overflow: hidden;
+  }
+}
+
+.van-tabbar--fixed{
+  z-index: 10;
+}
+
+.day-steps{
+
+  .van-steps--vertical{
+    padding-left: 80px;
+  }
+
+  .van-step__circle-container{
+
+    width: 12px;
+    height: 12px;
+    border-radius: 7px;
+    border:none;
+    background: #c5c5c5;
+
+    .van-step__circle,
+    .van-icon{
+      display: none;
+    }
+  }
+
+  .van-step--vertical{
+    padding: 5px 0;
+
+    &::after{
+      display: none;
+    }
+  }
+  .van-step__line{
+    top: 50%;
+  }
+
+  .van-step--process,
+  .van-step__icon--active,
+  .van-step--finish{
+    .title{
+      margin-top: -15px;
+      color:#1BC2B1;
+    }
+
+    .van-step__circle-container{
+      width: 24px;
+      height: 24px;
+      margin-top: -4px;
+      border-radius: 12px;
+      border: 3px solid #d9f5f2;
+      background: #1BC2B1;
+    }
+
+    .van-step__line{
+      background-color: #1BC2B1;;
+    }
+  }
+
+  .title{
+    position: absolute;
+    top: 50%;
+    left: -95px;
+
+    width: 45px;
+    margin: -10px 0 0 0;
+
+    font-size: 12px;
+    font-weight: normal;
+    text-align: right;
+  }
+
+  .footer{
+    padding-left: 10px;
+    font-size: 14px;
+    color:#333333;
+  }
+
+  .card{
+    position: relative;
+    padding: 15px 13px;
+    margin-bottom: 0;
+    margin-left: 16px;
+    font-size: 16px;
+    border-radius: 5px;
+
+    .individuationTag{
+      margin:0 10px 5px 0;
+      padding:4px 12px;
+
+      font-size: 11px;
+    }
+    .van-button{
+      padding:7px 27px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+  }
+  .van-step--vertical .van-step__circle-container{
+    top: 50%;
+  }
+
+  .tag-list{
+    height: 30px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+}
+
+
+$emColor:#1BC2B1;
+$textColor: #999;
+
+.login-container {
+  min-height: 100vh;
+
+  padding: 50px 60px 0 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color:#3C3540;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  .van-field__label{
+    width: 36px;
+    font-size: 24px;
+  }
+  .van-cell::after{
+    border-bottom: none;
+  }
+  .van-field__control{
+    color:#fff;
+    font-size: 16px;
+
+    input {
+      background: transparent;
+      border: 0px;
+      -webkit-appearance: none;
+      color: #999;
+      caret-color: $textColor;
+
+      &::-webkit-input-placeholder{
+        color:$textColor;
+      }
+
+      &:-webkit-autofill {
+        -webkit-animation: autofill-fix1 1s infinite;
+        -webkit-text-fill-color: #F00 !important;
+      }
+    }
+
+  }
+
+  .van-field__button{
+    .van-button{
+      padding-right: 0;
+      border:none;
+      border-left: 1px solid $emColor;
+      font-size: 16px;
+      background: none;
+      color:$emColor;
+    }
+  }
+
+  .van-cell{
+    padding-right: 0;
+    padding-left: 0;
+    background: none;
+    color:#999;
+    border-bottom: 1px solid #999;
+    margin-bottom: 35px;
+  }
+  .whiteC{
+
+      padding-right: 0;
+      padding-left: 0;
+      background: none;
+      color:white;
+      border-bottom: 1px solid white;
+      margin-bottom: 35px;
+
+  }
+  .whiteY{
+
+    padding-right: 0;
+    padding-left: 0;
+    background: none;
+    color:white;
+    border-bottom: 1px solid white;
+    margin-bottom: 35px;
+
+}
+
+  .form-operation{
+    padding-top: 16px;
+
+    .van-button{
+      height: 50px;
+      font-size: 20px;
+    }
+    .van-button--primary{
+      background: $emColor;
+      border-color:$emColor;
+      margin-bottom: 20px;
+    }
+    .van-button--info{
+      background: none;
+      border-color: #fff;
+    }
+  }
+
+}
+
+.login-header{
+  padding-top: 20px;
+  text-align: center;
+  .logo{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+    border-radius: 50px;
+    background: $emColor;
+    color:#fff;
+
+    line-height: 90px;
+    font-size: 50px;
+  }
+  .name{
+    margin: -20px auto 10px auto;
+
+    color:$emColor;
+    font-size: 85px;
+  }
+}
+.van-divider{
+  margin: 8px 0;
+  border-color: #ececec;
+}
+
+/** 黑色背景 */
+.panel-action{
+  position: relative;
+  background-color:#342e36;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+  .content{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100%;
+
+    color:#fff;
+    line-height: 1.6;
+
+    > .title{
+      margin-top: 0;
+    }
+
+    > .title,
+    > p{
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  .van-button{
+    min-width: 40%;
+    height: auto;
+    padding: 8px 30px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+}
+
+.page-wraper {
+  padding: 10px;
+}
+
+.ticket,
+.ticket-simple{
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.08));
+
+  .header,
+  .footer,
+  .rip{
+    background: #fff;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px 10px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    .extra{
+      text-align: right;
+      font-size: 14px;
+      color:#1bc2b1;
+      .van-icon{
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+      white-space:nowrap;
+    }
+  }
+  .title{
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .content{
+    padding-top: 6px;
+    em{
+      font-style: normal;
+      color:#1BC1B1;
+    }
+  }
+
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    padding: 0 20px 10px 20px;
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    .extra{
+      .van-button{
+        width:auto;
+        height: auto;
+
+        padding: 8px 16px;
+        line-height: 1.2;
+      }
+    }
+
+  }
+
+  .rip{
+    position: relative;
+    height: 20px;
+    margin: 0;
+    box-shadow: 0 1px 0 0 #fff, 0 -1px 0 0 #fff;
+
+    .line{
+      height: 1px;
+      margin: 0 10px;
+      border-bottom: 1px solid #E9E9E9;
+      overflow: hidden;
+    }
+  }
+
+  .tag-list{
+    padding-top: 8px;
+
+    .van-tag{
+      padding: 5px 10px;
+      margin-right: 10px;
+      border: 1px solid #e9f1f6;
+      border-radius: 20px;
+      background: none;
+      color:#666666;
+      font-size: 12px;
+    }
+  }
+
+
+  .avatar-name-bar{
+    padding-right: 0;
+    padding-left:0 ;
+  }
+
+}
+
+.ticket{
+  .rip{
+
+    margin: 0 10px;
+
+    .line{
+      height: 9px;
+      margin: 0;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border: 5px solid transparent;
+      border-top-color: #fff;
+      border-right-color: #fff;
+      border-radius: 100%;
+      pointer-events:none;
+      box-sizing: content-box;
+    }
+
+    &::before{
+      left: -10px;
+    }
+    &::after{
+      transform: translate(-50%, -50%) rotate(225deg);
+     right: -40px;
+    }
+  }
+}
+
+.ticket-simple{
+  .rip{
+    padding-top: 10px;
+  }
+
+  .footer{
+    padding-top: 5px;
+  }
+}
+
+
+.lesson-panel,
+.coach-card{
+
+  position: relative;
+  overflow: hidden;
+
+  .bg{
+    position: absolute;
+    top:-30px;
+    right: -30px;
+    bottom:-30px;
+    left:-30px;
+
+    background: rgb(7, 17, 27);
+    background-size: 100% 100%;
+
+    filter: blur(20px);
+
+    .filter{
+      position: absolute;
+      z-index: 10;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(7, 17, 27, 0.6);
+    }
+
+  }
+
+  .content{
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+
+    text-align: center;
+
+    color:#fff;
+
+  }
+
+}
+
+/** 头部黑色栏 */
+.lesson-panel{
+  .header{
+    padding-top: 10px;
+    margin-bottom: 10px;
+
+    p{
+      margin: 0;
+      padding:8px 0;
+
+      font-size: 14px;
+    }
+  }
+
+  .title{
+    margin:0;
+    padding: 10px;
+
+    font-size: 34px;
+    font-weight: normal;
+  }
+
+  .van-button{
+    height: 38px;
+    padding: 0 40px;
+    font-size: 16px;
+  }
+}
+
+/** 教练黑色的名片 */
+.coach-card{
+
+  border-radius: 10px;
+
+  box-shadow: 0 1px 6px rgba(0,0,0,.3);
+
+  .avatar{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 5px auto;
+
+    img{
+      width:100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .name{
+    margin:0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .level{
+    padding: 4px 0 12px 0;
+    font-size: 12px;
+  }
+
+  .tag-list{
+    .van-tag{
+      margin: 0 5px 2px 5px;
+      padding: 4px 12px;
+      background: none;
+      font-size: 12px;
+      color:#fff;
+
+      &::after{
+        border-radius: 20px;
+        border-width: 2px;
+      }
+    }
+  }
+}
+
+.van-cell::after {
+  border-bottom: 0px;
+}
+
+.site-tabs{
+  .van-steps--vertical{
+    overflow: visible;
+  }
+
+  .van-tabs__wrap{
+    height: 55px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .van-tab-{
+    color:#999;
+  }
+  .van-tab__text{
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  .van-tab--active{
+    color:#1BC2B1;
+  }
+  .van-tabs__line{
+    max-width: 20px;
+    height: 6px;
+    background-color:#1BC2B1;
+  }
+}
+
+/** 评论 */
+.comment-list{
+
+  .btn-view-all{
+
+    border:none;
+    font-size: 14px;
+    color:#1BC1B1;
+
+    background: none;
+  }
+}
+.comment-item{
+  display: flex;
+
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #F1F1F1;
+
+  font-size:14px;
+  line-height: 1.6;
+
+  .avatar{
+    width: 36px;
+    overflow: hidden;
+
+    img{
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+  }
+
+  .main-content{
+    flex: 1;
+
+    padding-left: 4px;
+    color:#433B47;
+  }
+
+  .header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding:0;
+
+    .van-rate{
+      margin-top: -3px;
+    }
+  }
+
+  .name{
+    display: inline;
+    margin:-3px 5px 0 0;
+    font-weight: normal;
+  }
+
+  time{
+    display: block;
+    padding-bottom: 6px;
+    color:#999999;
+    font-size: 10px;
+  }
+
+  .content{
+    font-weight: bold;
+  }
+}
+
+
+/** 类似订单信息的列表 */
+.description-list{
+
+  .van-cell__title,
+  .van-cell__value{
+    padding: 1px 0;
+    font-size: 13px;
+  }
+  .van-cell__title{
+    flex : 0 1 auto;
+    width: 100px;
+
+    color:#656565;
+  }
+
+  .van-cell__value{
+    text-align: left;
+    color:#999999;
+  }
+}
+
+/** 细边框的按钮 ，类似联系客服 */
+.btn-hairline{
+  height: 40px;
+}
+
+/** 头像与名称 */
+.avatar-name-bar{
+
+  padding: 5px 20px;
+  font-size: 14px;
+
+  background: #fff;
+
+  > .avatar,
+  > .name{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .avatar{
+    img{
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+    }
+  }
+  .name{
+    margin-left: 14px;
+    font-size: 14px;
+  }
+}
+
+.textarea-wrapper{
+  textarea{
+    padding: 8px 20px;
+    border-radius: 5px;
+    background: #F4F4F4;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+
+.panel-result{
+  padding: 26px 0 10px 0;
+  text-align: center;
+
+  .content{
+    margin-bottom: 6px;
+    .icon{
+      font-size: 80px;
+      color:#1bc2b1;
+
+      .van-icon{
+        text-shadow: 2px 2px 8px rgba(0,0,0,.1);
+      }
+    }
+
+    .title{
+      margin:0;
+      padding: 0 0 20px 0;
+      font-size: 18px;
+    }
+
+    p{
+      margin:0;
+      padding: 5px 0;
+
+      color:#999999;
+
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  }
+
+  .operation{
+    .van-button{
+      height: 38px;
+      padding: 0 40px;
+      margin: 0 6px;
+    }
+
+    .btn-view-order{
+      background: #433B47;
+      color:#fff;
+    }
+  }
+}
+
+.site-tabbar{
+  height: 52px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.1);
+
+  .van-tabbar-item{
+    display: block;
+    padding-bottom: 12px;
+
+    line-height: 1.2;
+
+    text-align: center;
+  }
+  .van-tabbar-item__icon{
+    height: 33px;
+    margin-bottom: 1px;
+    font-size: 28px;
+    flex: 0 0 auto;
+  }
+
+  .svg-icon{
+    vertical-align: 0;
+  }
+
+  .my-item{
+    .van-tabbar-item__icon{
+      padding-top: 5px;
+      margin-bottom: -4px;
+      font-size: 22px;
+    }
+  }
+}
+.van-dialog__confirm{
+  color:#1bc2b1
+}
